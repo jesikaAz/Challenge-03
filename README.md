@@ -2,7 +2,7 @@
 
 #Projet: Reproduction de l'index du site Soledad,Best Fashion Lifestyle Blog WordPress Themes 2016
 
-#Date: Semaine 24
+#Date: Semaine 24 et 26
 
 #Authors: Jessica Anschutz / Jonathan Guillou
 
