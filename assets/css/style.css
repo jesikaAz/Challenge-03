@@ -1,0 +1,513 @@
+
+/*--Description: Intégration d'une maquette avec bootstrap
+
+Auteur: Jessica Anschutz et Jonathan Guillou
+
+Date: Semaine 24 et 26 --*/
+
+
+
+/*------------ Organisation du CSS Challenge-03 ----------*
+00- Généralités 
+01- Polices 
+02- Barre de navigation
+03- Header
+04- Blocs d'articles 
+05- Pagination
+06- Footer 
+/*---------------------------------------------------------*
+
+
+
+/*-----------Généralités---------*/
+
+body{
+	width: 100%;
+	height:100%;
+	font-size:14px;
+}
+.row{
+	margin:0;
+
+}
+.col-xs-12{
+	padding:0px;
+}
+.col-md-12{
+	padding:0px;
+}
+.col-lg-12{
+	padding: 0px;
+}
+
+/*------------Polices---------*/
+
+@font-face{
+	font-family: "FontAwesome";
+	src: url("../fonts/FontAwesome.otf");
+}
+
+@font-face{
+	font-family: "Lato";
+	src: url("../fonts/Lato-Regular.ttf"); 
+}
+
+@font-face{
+	font-family: "PlayfairDisplay";
+	src: url("../fonts/PlayfairDisplay-Bold.ttf");
+}
+
+
+/*------------Barre de navigation---------*/
+
+.navbar{
+	background-color: #212121;
+	width: 100%;
+	height:60px;
+	position: fixed;
+	z-index: 1;
+	padding: 10px 0px 50px 0px;
+	border-radius: 0;
+	display:flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.container{
+	padding: 0;
+	display:flex;
+}
+#search{
+	font-size: 16px;
+	width: 20px;
+	margin-top: 10px; 
+	color: #999999;
+}
+ul{
+	padding: 10px 0px 30px 0px;
+	width: 100%;
+	justify-content: left;
+}
+
+li{
+	font-family: 'Playfair Display', serif;
+	font-size: 12px;
+	letter-spacing: 1px; 
+	color: #999999;
+	font-weight: bold;
+	list-style: none;
+	display: inline;
+	margin-right: 38px;
+	margin-left: 0px;
+}
+li.current-menu-item a {
+    color: #ffffff;
+}
+
+a{
+	color: #999999;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #ffffff;
+}
+
+
+/*----------------Header------------------*/
+
+header{
+	width: 100%;
+	height: 228px;
+	background-color: #f5f5f5;
+	justify-content: center;
+}
+
+.section{
+	width: 100%;
+	margin-top: 100px;
+	background-size: cover;
+	background-color: #f5f5f5;
+}
+
+.imgheader{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1.textheader{
+	width: 100%;
+    font-weight: bold;
+    font-family: 'PT Serif', serif;
+    vertical-align: top;
+	font-size: 14px;
+	color:#313131;
+	font-style: italic; 
+	text-align: center;
+	letter-spacing: 1px;
+	padding-bottom: 65px;
+	margin-top: 17px;
+	margin-bottom: 0px;
+}
+
+.article{
+	width: 100%;
+	background-image: url("../images/mom-daughter1.jpg");
+	background-size: cover;
+	max-width: 100%;
+	min-height: 560px;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.post{
+	height: 150px;
+	width: 480px;
+	background-color:#ffffff;
+	border-style: double;
+	border-color: #717981;
+	text-align: center;
+	padding: center;
+	margin:center;
+}
+.post p{
+	color:red;
+	font-size: 13px;
+	margin:20px 0px 0px 170px;
+}
+
+.post p a{
+	padding: center;
+    margin:center;
+	color:red;
+}
+
+.post h2{
+	margin:0px 0px 5px 0px;
+}
+
+
+/*----------------- Blocs d'articles ----------------*/
+
+.container-fluid{
+	width: 1170px;
+	text-align: center;
+	padding: 0;
+}
+
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	width:570px;
+	height:380px;
+	background-position:center;
+	margin:0;
+	padding:0;
+} 
+
+.imagearticle  {
+	width:100%;
+	height:370px;
+	overflow: hidden;
+	position: relative;
+}
+
+.imagearticle img {
+	position: absolute;
+}
+
+.col-md-6{ 
+	width: 570px;
+	position: relative;
+	padding-right: 15px;
+	padding-left: 15px;	
+} 
+
+h3 a{
+	font-family: 'Lato',serif; 
+	text-align: center;
+	font-size: 12px;
+	color:#a60505;
+	letter-spacing: 0.5px;
+}
+
+h2 a{
+	font-family:'Playfair Display',serif; 
+	text-align: center;
+	font-size: 18px;
+	color: #313131;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+h4{
+	font-family: 'Lato',serif; 
+	text-align: center;
+	font-style: italic;
+	text-align: center;
+	color:#DEDEDE;
+	margin: 0 11px 0 15px;
+	display: inline-block;
+}
+
+h4 span{
+	font-family: 'Lato',serif;
+	font-style: italic;
+	font-size: 14px;
+	color: #313131;
+}
+
+p{
+	font-family: 'Lato',serif;
+	color:#313131;
+	font-size: 14px;
+	line-height: 28px;
+	text-align: left;
+	padding: 10px 0px 10px 0px;
+}
+
+.share{
+	position: relative;
+	display:inline-block;
+	z-index:10;
+	letter-spacing: 5px;
+   	margin-bottom: 15px;
+}
+
+.share a{
+	color: #000;
+}
+
+.separation-top{
+    border-bottom: solid 2px #a60505;
+    max-width: 60px;   
+    margin: auto;
+    padding: 10px;
+}
+
+/*----------------- Pagination ----------------*/
+.pagination{
+	margin:0 auto;
+	display:inline-block;
+	border:1px #888;
+	text-align:center;
+	line-height: 28px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "PlayfairDisplay-Black";
+}
+
+.pagination li a{
+	color:#888;
+}
+
+.pagination .active a{
+	z-index: -1;
+	color: black;
+	cursor: default;
+	border:1px;
+	background-color: #a60505;
+	border-color: #a60505;
+}
+
+barre-separation{
+	width: 100%;
+	height: 2px;
+	color: #DEDEDE;
+	display: block;
+}
+
+
+
+/*-----------------Footer-----------------------*/
+
+footer{
+	width: 100%;
+	background-color: #ffffff;
+	word-wrap: break-word;
+	border-top: 1px solid #ECECEC;
+
+}
+
+.footer-widget-wrapper{
+	min-height: 429px;
+	width: 100%;
+	justify-content: space-between;
+}
+
+h5.double{
+	width: 90%;
+	font-family:'Playfair Display',serif;
+	font-size: 16px; 
+	font-weight: bold;
+	border-bottom-style: double;
+	line-height: 42px;
+	margin-bottom: 22px;
+	color: #313131;
+}
+/*---About me---------*/
+
+
+aside{
+
+	min-height: 242px;
+	text-align: left;
+	line-height: 30px;
+	margin-bottom: 50px;
+	background-size: cover;
+}
+
+.about{
+	width: 90%;
+}
+
+/*----Recent post-------*/
+
+.recent{
+	min-height: 429px;
+	width: 90%;
+    float: left;
+}
+
+#recent1{
+	padding-bottom: 15px;
+	width: 90%;
+}
+
+.barre-separation1{	
+	padding-top: 15px;
+	border-top:solid 1px #717981;
+	width: 90%;
+}
+
+
+/*----Instagram slider--------*/
+
+.instagram {
+	min-height: 429px;
+	width: 90%;
+    float: left;
+}
+
+.instagram1{
+	width: 90%;
+	background-image: url("../images/instagram.jpg");
+	background:cover;
+	min-height: 329px;
+}
+
+
+/*--------Bloc photo instagram---------*/
+
+.instagram2{
+	display: inline;
+	width: 100%;
+	min-height: 169px;
+	text-align: center;
+}
+ul.insta{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+}
+li.insta{
+	margin: 0px -2px 0px -2px;
+	justify-content: flex-start;
+}
+li.insta a:hover{
+	color: #ffffff;
+}
+
+/*--------Bloc icônes sociales---------*/
+.icon{
+	width: 100%;
+	min-height: 40px;
+	display: flex;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: #212121;
+	margin: 0 auto;
+	text-align: center;
+}
+
+ul.icons{
+	width: 90%;
+	padding-bottom: 35px;
+	justify-content: center;
+	border-bottom: 1px solid #4A4A4A;
+}
+
+li.icons {
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	margin-right: 40px;
+}
+
+li.icons i.fa-facebook{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+li.icons i.fa-twitter{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+li.icons i.fa-instagram{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+li.icons i.fa-pinterest{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+li.icons i.fa-flickr{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+li.icons i.fa-tumblr{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+li.icons i.fa-youtube{
+	font-size: 22px;
+	border:solid 2px #313131;
+	border-radius: 90px 90px 90px 90px;
+	margin-right: 10px;
+}
+
+/*--------Bloc icônes sociales---------*/
+
+.end{
+	min-height: 80px;
+	text-align: center;
+	background-color: #212121;
+	color: #717981;
+	padding: 20px 0px 50px 0px;
+}
+
+.end p{
+	text-align: center;
+	line-height: 65px;
+	color: #999;
+}
